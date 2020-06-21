@@ -10,10 +10,22 @@
   font-weight: normal;
   font-style: normal;
 }
-
-html {
-  font-size: 14px;
+.wh{
+  color: #fff;
+  font-family: SF-R;
 }
+.bl{
+  color: #000;
+  font-family: SF-R;
+}
+
+.fs-1{
+    font-size: 1.5vh;
+}
+.fs-3{
+    font-size: 3vh;
+}
+
 @media (min-width: 768px) {
   html {
     font-size: 16px;
@@ -21,11 +33,11 @@ html {
 }
 
 .first-container{
-  width: 100%;
-  height: 100vh;
+  width: 100vw;
+  min-height: 100vh;
 }
 
-.white{
+.black{  /* нихера не белый но для названия навигации*/
   color: #666;
   font-family: SF;
 }
@@ -43,27 +55,26 @@ html {
 }
 
 
+/* https://github.com/pixelcog/parallax.js/tree/v2.0.0-alpha */
 
-http://pixelcog.github.io/parallax.js/
 
-.container-parallax{
-  margin: 0 auto;
-  font-size: 24px;
-  padding: 0px;
+.parallax-container{
+  min-height: 60vh;
+  background: transparent;
+
 }
 
-.parallax-window {
-    min-height: 500px;
-    background: transparent;
-}
-
-.info{
-  z-index: 2;
-  position: relative;
-}
-
-.atom{
-  background-color: #3f3b45;
+.scrollingElement{
+  overflow: scroll;
+  position: absolute;
+  top: 213px;
+  left: 0;
+  width: 100vw;
   height: 100vh;
-  width: 100%;
+  overflow-y: auto;
+}
+
+.annotation{
+  background-color: #2a2c2b;
+  min-height: 40vh;
 }

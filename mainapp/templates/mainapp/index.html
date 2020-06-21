@@ -9,6 +9,23 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+      $(function(){
+        if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
+          $('#ios-notice').removeClass('hidden');
+          $('.parallax-container').height( $(window).height() * 0.5 | 0 );
+        } else {
+          $(window).resize(function(){
+            var parallaxHeight = Math.max($(window).height() * 0.7, 200) | 0;
+            $('.parallax-container').height(parallaxHeight);
+          }).trigger('resize');
+        }
+      });
+    </script>
+    <script src="../../static/js/jquery.parallax.js"></script>
+
+
   <title>Kvantorium journal</title>
 
   <style>
@@ -33,9 +50,9 @@
 <div class="first-container">
     <div class="d-flex flex-column flex-row align-items-center px-md-4 mb-3 border-bottom">
       <nav class="my-1 my-md-2">
-        <a class="p-2 m-sm-5 white" href="#">команды</a>
-        <a class="p-2 m-sm-5 white" href="#">цели</a>
-        <a class="p-2 m-sm-5 white" href="#">о проекте</a>
+        <a class="p-2 m-sm-5 black" href="#">команды</a>
+        <a class="p-2 m-sm-5 black" href="#">цели</a>
+        <a class="p-2 m-sm-5 black" href="#">о проекте</a>
       </nav>
   </div>
 
@@ -51,15 +68,35 @@
   </div>
 </div>
 
-<div class="container-parallax">
-  <h1 class="-flex flex-column flex-row align-items-center px-md-4 mb-3">hello</h1>
-    <div class="parallax-window" data-parallax="scroll" data-z-index="1" data-image-src="../../static/img/2.jpg">
-      <h1 class="flex-row align-items-center px-md-4 mb-3 info">every hello</h1>
+<div class="first-container">
+  <div class="parallax-container" data-parallax data-scrolling-selector=".scrollingElement" data-bleed="50" data-speed="0.2" data-src="../../static/img/photo_2020-06-21_21-33-30.jpg">
+    <div class="container-fluid">
+      <h2 class="d-flex justify-content-center wh fs-3">Солнечная энергетика - рывок в мирное будущее</h2>
+      <p class="d-flex justify-content-center wh fs-1">Гибкие солнечные элементы, способные принимать практически любые формы,
+       в самом деле открывают новые горизонты для человеческого воображения</p>
     </div>
-    <div class="atom"></div>
+  </div>
+
+  <section class="annotation">
+    <h2 class="wh">hello</h2>
+  </section>
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="../../static/js/parallax.min.js"></script>
+<div class="first-container">
+  <div class="parallax-container" data-parallax data-scrolling-selector=".scrollingElement" data-bleed="50" data-speed="0.2" data-src="../../static/img/photo_2020-06-21_23-12-52.jpg">
+    <div class="container-fluid">
+      <h2 class="d-flex justify-content-center wh fs-3">Распределенная генерация электроэнергии</h2>
+      <p class="d-flex justify-content-center wh fs-1">Гибкие солнечные элементы, способные принимать практически любые формы,
+       в самом деле открывают новые горизонты для человеческого воображения</p>
+    </div>
+  </div>
+
+  <section class="annotation">
+    <h2 class="wh">hello</h2>
+  </section>
+</div>
+
+
+
 </body>
 </html>
