@@ -1,3 +1,14 @@
+html{
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+body{
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
 @font-face {
   font-family: SF;
   src:url('../fonts/sf-ui-display-thin-58646e9b26e8b.woff') format('woff');
@@ -6,7 +17,7 @@
 }
 @font-face {
   font-family: SF-R;
-  src:url('../fonts/sf-ui-display-medium-58646be638f96.woff')format('woff');
+  src:url('../fonts/1.ttf')format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -45,7 +56,7 @@
 .sf-thin{
   font-family: SF;
   letter-spacing: 0.5rem;
-  font-size: 4vw;
+  font-size: 3vw;
   line-height: 1.5;
 }
 
