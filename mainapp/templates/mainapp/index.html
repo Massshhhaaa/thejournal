@@ -10,21 +10,56 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
   <title>Kvantorium journal</title>
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+
 </head>
-
 <body>
-  <nav class="site-header sticky-top py-1">
-  <div class="container d-flex flex-column flex-md-row justify-content-between">
-    <a class="py-2 d-none d-md-inline-block" href="#">команды</a>
-    <a class="py-2 d-none d-md-inline-block" href="#">цели</a>
-    <a class="py-2 d-none d-md-inline-block" href="#">о проекте</a>
-
+<div class="first-container">
+    <div class="d-flex flex-column flex-row align-items-center px-md-4 mb-3 border-bottom">
+      <nav class="my-1 my-md-2">
+        <a class="p-2 m-sm-5 white" href="#">команды</a>
+        <a class="p-2 m-sm-5 white" href="#">цели</a>
+        <a class="p-2 m-sm-5 white" href="#">о проекте</a>
+      </nav>
   </div>
-</nav>
 
+  <div class="container">
+        <div class="row">
+          <div class="pt-5 mb-3 col">
+              <h1  class='sf-thin'>The children science</h1>
+              <h1 class='sf-thin'>and engineering </h1>
+              <h1 class='sf-thin'>journal</h1>
+          </div>
+        <img src="../../static/img/art.png" class="art pt-5 mb-3 col">
+        </div>
+  </div>
+</div>
 
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<div class="container-parallax">
+  <h1 class="-flex flex-column flex-row align-items-center px-md-4 mb-3">hello</h1>
+    <div class="parallax-window" data-parallax="scroll" data-z-index="1" data-image-src="../../static/img/2.jpg">
+      <h1 class="flex-row align-items-center px-md-4 mb-3 info">every hello</h1>
+    </div>
+    <div class="atom"></div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="../../static/js/parallax.min.js"></script>
 </body>
 </html>
