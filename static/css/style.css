@@ -37,6 +37,10 @@ body{
     font-size: 3vh;
 }
 
+.bg{
+  background-color: #e8e8d8;
+}
+
 @media (min-width: 768px) {
   html {
     font-size: 16px;
@@ -51,6 +55,7 @@ body{
 .black{  /* нихера не белый но для названия навигации*/
   color: #666;
   font-family: SF;
+  font-size: 0.8em;
 }
 
 .sf-thin{
@@ -72,7 +77,6 @@ body{
 .parallax-container{
   min-height: 60vh;
   background: transparent;
-
 }
 
 .scrollingElement{
@@ -86,6 +90,6 @@ body{
 }
 
 .annotation{
-  background-color: #2a2c2b;
+  background-color: #121211;
   min-height: 40vh;
 }
