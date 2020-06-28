@@ -79,6 +79,7 @@ a:hover{
 .parallax-container{
   min-height: 100vh;
   background: transparent;
+
 }
 
 .scrollingElement{
@@ -100,10 +101,7 @@ a:hover{
 
 .annotation{
   min-height: 50vh;
-}
-
-.qq{
-  padding: 10vh;
+  padding: 10vh 0 7vh 0;
   width: 60vw;
   position: relative;
   margin: 0 auto;
@@ -114,5 +112,4 @@ a:hover{
   -webkit-column-count:2;
   -moz-column-count:2;
   column-count: 2;
-
- }
+}
