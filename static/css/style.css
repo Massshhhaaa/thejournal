@@ -75,6 +75,7 @@ a:hover{
 /* https://github.com/pixelcog/parallax.js/tree/v2.0.0-alpha */
 .project{
   min-height: 140vh;
+  background-color: #121211;
 }
 
 .parallax-container{
@@ -98,7 +99,6 @@ a:hover{
 }
 
 .annotation{
-  background-color: #121211;
   min-height: 40vh;
 }
 
