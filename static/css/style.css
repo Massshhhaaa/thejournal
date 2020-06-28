@@ -7,6 +7,7 @@ body{
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
+      background-color: #121211;
   }
 a:hover{
   color: black;
@@ -36,10 +37,11 @@ a:hover{
 }
 
 .fs-1{
-    font-size: 1.5vh;
+    font-size: 2vh;
 }
 .fs-3{
-    font-size: 3vh;
+  text-align: center;
+    font-size: 4vh;
 }
 
 @media (min-width: 768px) {
@@ -54,12 +56,13 @@ a:hover{
 }
 
 .black{  /* нихера не белый но для названия навигации*/
-  color: #666;
+  color: #fff;
   font-family: SF;
   font-size: 0.8em;
 }
 
 .sf-thin{
+  color: #fff;
   font-family: SF;
   letter-spacing: 0.5rem;
   font-size: 3vw;
@@ -73,11 +76,6 @@ a:hover{
 
 
 /* https://github.com/pixelcog/parallax.js/tree/v2.0.0-alpha */
-.project{
-  min-height: 140vh;
-  background-color: #121211;
-}
-
 .parallax-container{
   min-height: 100vh;
   background: transparent;
@@ -93,16 +91,19 @@ a:hover{
   overflow-y: auto;
 }
 
+
+
 .vlad{
   max-width: 60vw;
   box-sizing: content-box;
 }
 
 .annotation{
-  min-height: 40vh;
+  min-height: 50vh;
 }
 
 .qq{
+  padding: 10vh;
   width: 60vw;
   position: relative;
   margin: 0 auto;
