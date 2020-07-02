@@ -1,0 +1,29 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="{% static 'js/jquery.parallax.js' %}"></script>
+  <title>{{ post.title }}</title>
+</head>
+<body>
+  <div class="d-flex flex-column flex-row align-items-center px-md-3 mb-2">
+    <nav class="my-1 my-md-2">
+      <a class="p-2 m-sm-5 black" href="/">главная</a>
+      <a class="p-2 m-sm-5 black" href="#">команды</a>
+      <a class="p-2 m-sm-5 black" href="#">о проекте</a>
+  </nav>
+
+ <div class="container pt-3 pt-md-5 pb-1 wh border-bottom"><h5 class='border-bottom pb-2'>{{ post.title }}</h5>
+  <p>{{annotatin}} Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum maxime ullam alias quia enim atque ipsa ut quibusdam sed nemo, rem veritatis excepturi minus velit hic in at, dolore quasi suscipit. A dignissimos, minus vitae ad magni nihil adipisci animi. Excepturi aspernatur, eveniet error dicta ipsa sequi expedita totam cumque tempora odio quos doloribus impedit fugit explicabo nobis praesentium provident maxime, tenetur consequatur pariatur reprehenderit modi, eos omnis nihil. Autem officiis corporis blanditiis temporibus repudiandae reiciendis totam ab adipisci iste, dolorem quod facere dolorum iure, enim laudantium quia? Est omnis ea laudantium consectetur, exercitationem id, voluptatem ducimus pariatur illum dignissimos aperiam accusantium deleniti obcaecati explicabo cupiditate voluptatum error. Consequatur voluptatem dolore amet assumenda quos sunt est, neque totam. Repellat dolorem quibusdam doloremque ratione pariatur eveniet hic odio natus molestias error temporibus, alias labore dolores perferendis! Illum iusto totam maxime distinctio officia a, mollitia neque odit, deleniti quasi doloribus quibusdam ratione tempora cupiditate voluptate quam consequuntur delectus soluta cum saepe, commodi. Id hic laborum ab numquam quod sint qui consectetur cumque voluptates voluptatum odio iste asperiores blanditiis, minima, sit inventore. Ex maxime assumenda unde fugiat. Vero corrupti distinctio facilis molestias corporis ut, dolorum excepturi. Quasi incidunt aspernatur reprehenderit a laborum. Temporibus!</p>
+ </div>
+
+</body>
+</html>

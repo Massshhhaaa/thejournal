@@ -23,7 +23,7 @@
         }
       });
     </script>
-    <script src="../../static/js/jquery.parallax.js"></script>
+    <script src="{% static 'js/jquery.parallax.js' %}"></script>
   <title>Kvantorium journal</title>
 </head>
 <body>
@@ -48,9 +48,9 @@
 </div>
 
 {% for h in hello %}
-  <div class="parallax-container" data-parallax data-scrolling-selector=".scrollingElement" data-bleed="50" data-speed="0.2" data-src="{{ h.img.url }}">
+  <div class="parallax-container" data-parallax data-scrolling-selector=".scrollingElement" data-speed="0.2" data-src="{{ h.img.url }}">
     <div class="container-fluid vlad col-md-8">
-      <h2 class="d-flex justify-content-center wh fs-3 m-5">{{ h.title }}</h2>
+      <h2 class="d-flex justify-content-center wh fs-3 py-5 post_title"><a class="" href="{{ h.slug }}">{{ h.title }}</a></h2>
       <p class="d-flex justify-content-center wh fs-1 py-5">{{ h.excerption }}</p>
     </div>
   </div>

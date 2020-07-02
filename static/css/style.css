@@ -2,15 +2,26 @@ html{
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
+    color: white;
 }
 body{
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
-      background-color: #121211;
+    background-color: #121211;
   }
+
+.post_title a{
+  color: white;
+
+}
+
+.post_title a:hover{
+  color: white;
+
+}
 a:hover{
-  color: black;
+  color: grey;
   transition-duration: 0.3s;
   text-decoration: none;
 }
@@ -57,7 +68,7 @@ a:hover{
   height: 100vh;
 }
 
-.black{  /* нихера не белый но для названия навигации*/
+.black{  /* для названия навигации*/
   color: #fff;
   font-family: 'Jost', sans-serif;
   font-size: 0.8em;
