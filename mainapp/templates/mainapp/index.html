@@ -30,8 +30,8 @@
 <div class="first-container">
     <div class="d-flex flex-column flex-row align-items-center px-md-3 mb-2">
       <nav class="my-1 my-md-2">
-        <a class="p-2 m-sm-5 black" href="#">команды</a>
-        <a class="p-2 m-sm-5 black" href="#">о проекте</a>
+        <a class="p-2 m-sm-5 nav-item" href="#">команды</a>
+        <a class="p-2 m-sm-5 nav-item" href="#">о проекте</a>
       </nav>
   </div>
 
@@ -48,7 +48,7 @@
 </div>
 
 {% for h in hello %}
-  <div class="parallax-container" data-parallax data-scrolling-selector=".scrollingElement" data-speed="0.2" data-src="{{ h.img.url }}">
+  <div class="parallax-container" data-parallax data-scrolling-selector=".scrollingElement" data-bleed='50' data-speed="0.2" data-src="{{ h.img.url }}">
     <div class="container-fluid vlad col-md-8">
       <h2 class="d-flex justify-content-center wh fs-3 py-5 post_title"><a class="" href="{{ h.slug }}">{{ h.title }}</a></h2>
       <p class="d-flex justify-content-center wh fs-1 py-5">{{ h.excerption }}</p>

@@ -1,3 +1,15 @@
+@font-face {
+  font-family: san;
+  src:url('../fonts/post/SFUIText-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+.nav-item{
+  color: #fff;
+  font-family: san;
+  font-size: 0.8em;
+}
+
 html{
     width: 100%;
     max-width: 100%;
@@ -85,13 +97,13 @@ a:hover{
 
 .art{
   width: 10vw;
-  height: auto;
+  height: inherit;
 }
 
 
 /* https://github.com/pixelcog/parallax.js/tree/v2.0.0-alpha */
 .parallax-container{
-  min-height: 100vh;
+  min-height: 50vh;
   background: transparent;
 
 }
