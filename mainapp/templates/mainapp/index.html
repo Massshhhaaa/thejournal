@@ -9,21 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script>
-      $(function(){
-        if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
-          $('#ios-notice').removeClass('hidden');
-          $('.parallax-container').height( $(window).height() * 0.5 | 0 );
-        } else {
-          $(window).resize(function(){
-            var parallaxHeight = Math.max($(window).height() * 0.7, 200) | 0;
-            $('.parallax-container').height(parallaxHeight);
-          }).trigger('resize');
-        }
-      });
-    </script>
-    <script src="{% static 'js/jquery.parallax.js' %}"></script>
+
   <title>Kvantorium journal</title>
 </head>
 <body>
@@ -48,14 +34,11 @@
 </div>
 
 {% for h in hello %}
-  <div class="parallax-container" data-parallax data-scrolling-selector=".scrollingElement" data-bleed='50' data-speed="0.2" data-src="{{ h.img.url }}">
-    <div class="container-fluid vlad col-md-8">
-      <h2 class="d-flex justify-content-center wh fs-3 py-5 post_title"><a class="" href="{{ h.slug }}">{{ h.title }}</a></h2>
+    <div style="background-image: url({{ h.img.url }})" class="container-fluid post-image">
+      <h2 class="d-flex justify-content-center wh fs-3 py-5 post_title"><a href="{{ h.slug }}">{{ h.title }}</a></h2>
       <p class="d-flex justify-content-center wh fs-1 py-5">{{ h.excerption }}</p>
     </div>
-  </div>
-
-  <div class="annotation wh">{{h.annotation}} Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint praesentium at accusantium cupiditate nobis, possimus veniam, asperiores ex ipsa. Dicta eveniet accusamus ratione architecto perspiciatis porro eos nulla error, nihil omnis magni iure doloremque nostrum deserunt praesentium ipsam possimus quam, explicabo. Laudantium nesciunt pariatur ab perferendis labore nam suscipit maxime nisi doloribus voluptates. Debitis officia, nam? Assumenda repellendus aperiam tenetur ad illo asperiores enim suscipit fuga doloremque odio laborum quidem similique sint, saepe, minima, doloribus itaque esse adipisci molestiae quos sed consequatur dolorum optio officiis. Dolorum temporibus, officiis quibusdam dolorem vitae perferendis accusamus sequi excepturi quia quasi nam itaque ducimus ipsa laboriosam tempora recusandae velit, eius facere cupiditate maiores quod odit repellendus debitis ipsam veniam. Beatae iure voluptates quis natus doloribus, nostrum, voluptate asperiores quos quidem, alias dignissimos rem voluptas. Tempore at iure eius possimus deserunt autem, dolor rem maxime asperiores unde eum suscipit, molestiae, quis non ab excepturi culpa veniam facilis quas necessitatibus inventore in. Aut officia, consectetur unde suscipit deleniti illo eum et tempore repellat aliquid tempora! Minima aperiam asperiores officia deserunt ratione nihil ipsum quia officiis ab architecto vitae, eos, ipsa itaque id recusandae vel quod reprehenderit! Quod quia quo sequi perferendis eveniet commodi harum, neque, voluptas! Aut numquam, amet nihil fugit ipsam, inventore sapiente placeat quam fuga modi quos, recusandae vitae aliquam laborum eligendi perferendis error! Ab neque corporis quod consectetur nulla in dolorem cum eum a ipsum vel nihil asperiores expedita voluptates dicta, distinctio reiciendis saepe earum amet ex aliquam hic beatae, odio molestiae. Eos voluptas corporis ex cupiditate unde hic reiciendis inventore itaque laudantium laborum totam in reprehenderit alias, quasi facere, eveniet cum earum quam. Repellat, fuga voluptatem modi sequi explicabo perspiciatis eum dicta quis iusto facilis, mollitia magni provident ipsam id sed porro voluptas at vel officia. Id similique impedit debitis modi voluptatem.
+  <div class="annotation wh">{{h.annotation}} Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint praesentium at accusantium cupiditate nobis, possimus veniam, asperiores ex ipsa. Dicta eveniet accusamus ratione architecto perspiciatis porro eos nulla error, nihil omnis magni iure doloremque nostrum deserunt praesentium ipsam possimus quam, explicabo. Laudantium nesciunt pariatur ab perferendis labore nam suscipit maxime nisi doloribus voluptates. Debitis officia, nam? Assumenda repellendus aperiam tenetur ad illo asperiores enim suscipit fuga doloremque odio laborum quidem similique sint, saepe, minima, doloribus itaque esse adipisci molestiae quos seddolorem cum eum a ipsum vel nihil asperiores expedita voluptates dicta, distinctio reiciendis saepe earum amet ex aliquam hic beatae, odio molestiae. Eos voluptas corporis ex cupiditate unde hic reiciendis inventore itaque laudantium laborum totam in reprehenderit alias, quasi facere, eveniet cum earum quam. Repellat, fuga voluptatem modi sequi explicabo perspiciatis eum dicta quis iusto facilis, mollitia magni provident ipsam id sed porro voluptas at vel officia. Id similique impedit debitis modi voluptatem.
   </div>
 {% endfor %}
 

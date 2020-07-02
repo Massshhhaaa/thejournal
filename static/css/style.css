@@ -100,6 +100,14 @@ a:hover{
   height: inherit;
 }
 
+.post-image{
+  min-height: 100vh;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  opacity: 1;
+}
+
 
 /* https://github.com/pixelcog/parallax.js/tree/v2.0.0-alpha */
 .parallax-container{
