@@ -4,10 +4,11 @@
   font-weight: normal;
   font-style: normal;
 }
-.nav-item{
-  color: #fff;
-  font-family: san;
-  font-size: 0.8em;
+@font-face {
+  font-family: SF;
+  src:url('../fonts/sf-ui-display-thin-58646e9b26e8b.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 html{
@@ -23,32 +24,27 @@ body{
     background-color: #121211;
   }
 
-.post_title a{
-  color: white;
+.post_title a{color: white;}
+.post_title a:hover{color: white;}
+.excerption{}
 
-}
-
-.post_title a:hover{
-  color: white;
-
-}
 a:hover{
   color: grey;
   transition-duration: 0.3s;
   text-decoration: none;
 }
 
-@font-face {
-  font-family: SF;
-  src:url('../fonts/sf-ui-display-thin-58646e9b26e8b.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+.nav-item{
+  color: #fff;
+  font-family: san;
+  font-size: 0.8em;
 }
-@font-face {
-  font-family: SF-R;
-  src:url('../fonts/1.ttf')format('woff');
-  font-weight: normal;
-  font-style: normal;
+
+.name{
+
+}
+@media (max-width: 800px) {
+  .name {}
 }
 
 .wh{
@@ -69,11 +65,6 @@ a:hover{
     font-size: 3vh;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
 
 .first-container{
   width: 100vw;
@@ -88,16 +79,22 @@ a:hover{
 }
 
 .sf-thin{
+  font-size: 2rem;
   color: #fff;
   font-family: SF;
-  letter-spacing: 0.5rem;
-  font-size: 3vw;
+  letter-spacing: 0.3rem;
   line-height: 1.5;
+
 }
 
 .art{
-  width: 10vw;
-  height: inherit;
+    width: 50vw;
+    height: auto;
+}
+@media (max-width: 800px) {
+    .art {
+      display: none;
+    }
 }
 
 .post-image{
@@ -109,41 +106,48 @@ a:hover{
 }
 
 
-/* https://github.com/pixelcog/parallax.js/tree/v2.0.0-alpha */
-.parallax-container{
-  min-height: 50vh;
-  background: transparent;
-
-}
-
-.scrollingElement{
-  overflow: scroll;
-  position: absolute;
-  top: 213px;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow-y: auto;
-}
-
-
-
 .vlad{
   max-width: 40vw;
   box-sizing: content-box;
 }
 
+
 .annotation{
-  min-height: 50vh;
-  padding: 10vh 0 7vh 0;
+  min-height: auto;
+  padding: 3vh 0 3vh 0;
   width: 60vw;
   position: relative;
   margin: 0 auto;
   text-align: justify;
-  -webkit-column-gap: 30px;
-  -moz-column-gap: 30px;
-  column-gap: 30px;
+  -webkit-column-gap: 2em;
+  -moz-column-gap: 2em;
+  column-gap: 2em;
   -webkit-column-count:2;
   -moz-column-count:2;
   column-count: 2;
+}
+@media (min-width: 800px) and (max-width: 1200px) {
+  .annotation {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 2em;
+    -moz-column-gap: 2em;
+    column-gap: 2em;
+    padding: 3vh 5vw;
+    width: 90vw;
+
+  }
+}
+@media (max-width: 800px) {
+  .annotation {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+    -webkit-column-gap: 2em;
+    -moz-column-gap: 2em;
+    column-gap: 2em;
+    width: auto;
+    padding: 3vh 5vw;
+  }
 }
