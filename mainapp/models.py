@@ -5,7 +5,7 @@ from pytils.translit import slugify
 # Create your models here.
 class Hello(models.Model):
     title = models.CharField('Название', max_length=200)
-    slug = models.SlugField('url', unique=True)
+    slug = models.SlugField('url', unique=True, null=True, blank=True)
     img = models.ImageField(upload_to='static/img', null=True, blank=True)
     excerption = models.CharField('Отрывок', max_length=255)
     annotation = models.TextField('Аннотация')
