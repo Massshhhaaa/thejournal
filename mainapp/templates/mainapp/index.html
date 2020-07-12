@@ -7,37 +7,50 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+    {% include 'mainapp/source.html' %}
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Kvantorium journal</title>
 
-  <title>Kvantorium journal</title>
 </head>
 <body>
-<div class="first-container">
-    <div class="d-flex flex-column flex-row align-items-center border-bottom">
-      <nav class="my-2 my-md-2">
+<div id="progressbar"></div>
+<div id="scrollPath"></div>
+
+<section style="height:100vh;">
+  <nav id="navbar_alpha" class="d-flex justify-content-center py-2 py-md-3">
         <a class="px-md-5 px-3 nav-item" href="#">Команды</a>
         <a class="px-md-5 px-3 nav-item" href="#">О проекте</a>
-      </nav>
-  </div>
-  <div class="container inner-center-sm" >
+  </nav>
+
+
+    <div class="container inner-center-sm" >
         <div class="d-flex flex-row">
-            <div class="pt-md-5 mt-3 name">
+            <div class="pt-md-5 name align-self-center">
                 <h1  class='sf-thin'>The children science and engineering journal</h1>
             </div>
-            <div style="background-image: url(../../static/img/art.png)" class="art">
-          </div>
+            <div class="art">
+              <div class="d-flex flex-column">
+                <img src="{% static 'img/art/top.svg' %}" class="art-top">
+                <img src="{% static 'img/art/bottom.svg' %}" class="art-bottom">
+                <img src="{% static 'img/art/particle.svg' %}" class="art-particle">
+              </div>
+            </div>
+
         </div>
-  </div>
-</div>
+    </div>
+</section>
+
 
 {% for h in hello %}
-    <div style="background-image: url({{ h.img.url }})" class="container-fluid post-image">
-      <h2 class="d-flex justify-content-center wh fs-3 py-5 post_title"><a href="{{ h.slug }}">{{ h.title }}</a></h2>
-      <p class="d-flex justify-content-center wh fs-1 py-5 excerption">{{ h.excerption }}</p>
-    </div>
+<section>
+  <div style="background-image: url({{ h.img.url }})" class="post-image">
+      <div class="d-flex flex-column align-items-center post-container">
+        <h1 class="py-5 post_title"><a href="{{ h.slug }}">{{ h.title }}</a></h1>
+        <p class="py-5 excerption">{{ h.excerption }}</p>
+      </div>
+  </div>
   <div class="annotation">{{h.annotation}}</div>
+</section>
 {% endfor %}
 
 </body>

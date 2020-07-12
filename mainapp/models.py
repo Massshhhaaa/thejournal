@@ -1,6 +1,7 @@
 from django.db import models
 from django.db.models.signals import pre_save
 from pytils.translit import slugify
+from tinymce.models import HTMLField
 
 # Create your models here.
 class Hello(models.Model):
@@ -9,6 +10,7 @@ class Hello(models.Model):
     img = models.ImageField(upload_to='static/img', null=True, blank=True)
     excerption = models.CharField('Отрывок', max_length=255)
     annotation = models.TextField('Аннотация')
+    text = HTMLField()
 
 
     def __str__(self):

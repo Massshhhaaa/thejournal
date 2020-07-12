@@ -11,10 +11,15 @@ img{
   width: 100vw;
   height: auto;
 }
+section{
+  width: 100%;
+}
+
 .nav-item{
   color: black;
   font-family: san;
   font-size: 0.8em;
+  text-transform: uppercase;
 }
 .nav-item:hover{
   transition-duration: 0.3s;
@@ -25,7 +30,6 @@ img{
 .text{
   margin: 0 auto;
   text-align: justify;
-
 }
 
 @media (min-width: 600px) {
